@@ -1,38 +1,97 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+/* CSS VARIABLE */
+:root {
+  --BGCOLOR: #d9e7ff;
+  --OUTLINE_BGCOLOR: #e4e4e9;
+  --COLOR: #000;
+  --DARKCOLOR: #000;
+}
+
+/* ELEMENTS */
+.container {
+  background-color: var(--BGCOLOR);
+  display: grid;
+  grid-template-rows: 3.75rem 1fr;
+  min-height: 100svh;
+  padding: 0 40px;
+}
+
+.header {
+  background: var(--BGCOLOR);
+  color: var(--COLOR);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header a:any-link {
+  color: var(--COLOR);
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__ul {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header__li {
+  display: grid;
+  place-content: center;
+}
+
+.header__ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.hero {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero__cards {
+  background-color: var(--BGCOLOR);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.hero__card {
+  border-radius: 20px;
+  color: var(--COLOR);
+  background-color: #fff;
+  outline: 1.5px solid var(--OUTLINE_BGCOLOR);
+}
+
+.hero__section2 {
+  display: grid;
+  grid-template-columns: 2.8fr 5fr;
+  grid-template-rows: 430px;
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.hero__budget-card {
+  border-radius: 20px;
+  background-color: white;
+  /* color: white; */
+}
+
+.hero__user-sec {
+  border-radius: 20px;
+  background-color: white;
+  overflow-x: auto;
+  /* height: 100%; */
 }
